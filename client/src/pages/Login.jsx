@@ -33,10 +33,6 @@ const Login = () => {
         } else {
           toast.error(data.message);
         }
-
-        // data.success
-        //   ? setIsLoggedin(true) && getUserData() && navigate("/")
-        //   : toast.error(data.message);
       } else {
         const { data } = await axios.post(backendURL + "/api/auth/login", {
           email,
@@ -50,9 +46,6 @@ const Login = () => {
         } else {
           toast.error(data.message);
         }
-        // data.success
-        //   ? setIsLoggedin(true) && getUserData() && navigate("/")
-        //   : toast.error(data.message);
       }
     } catch (error) {
       toast.error(error.message);
